@@ -1,0 +1,129 @@
+// element组件主题样式库
+body {
+  // el-button相关
+  .el-button--medium {
+    padding: 8px 11px;
+  }
+  .el-button--info {
+    color: @text-color;
+    background-color: @btn-color-info;
+    border-color: @btn-color-info;
+  }
+  .el-button--primary {
+    background-color: @blue;
+    border-color: @blue;
+  }
+  .el-button--success {
+    background-color: @success;
+    border-color: @success;
+  }
+  .el-button--warning {
+    background-color: @warning;
+    border-color: @warning;
+  }
+  .el-button--danger {
+    background-color: @danger;
+    border-color: @danger;
+  }
+  .el-button.is-plain {
+    background-color: initial;
+  }
+  .el-button.is-disabled {
+    background-color: @disabled !important;
+    border-color: @disabled !important;
+    color: @disabled-txt !important;
+  }
+  .border-dashed {
+    border-style: dashed !important;
+  }
+
+  // checkbox-button样式
+  .hxe-checkbox-group {
+    .el-checkbox-button .el-checkbox-button__inner {
+      overflow: hidden;
+      width: 126px;
+      height: 40px;
+      margin: 4px 8px 4px 0;
+      line-height: 40px;
+      font-size: 12px;
+      border-radius: 3px;
+      transition: initial;
+      border: 1px solid @border-color;
+      padding: 0px;
+      background-color: @white;
+      box-sizing: border-box;
+    }
+    .el-checkbox-button.is-focus .el-checkbox-button__inner {
+      border-color: @border-color;
+    }
+    .el-checkbox-button.is-checked .el-checkbox-button__inner {
+      border: 1px solid @blue;
+      color: @blue;
+      // font-weight: bold;
+      box-shadow: none;
+      padding: 0px;
+
+      &::after {
+        position: absolute;
+        content: "";
+        transform: rotate(135deg);
+        bottom: -3px;
+        right: -10px;
+        border-radius: 3px;
+        border-bottom: 15px solid @blue;
+        border-left: 15px solid @blue;
+        border-right: 15px solid @blue;
+      }
+
+      &::before {
+        position: absolute;
+        content: "";
+        height: 6px;
+        width: 3px;
+        right: 3px;
+        z-index: 9;
+        bottom: 2px;
+        border-color: @white;
+        border-style: solid;
+        border-width: 0 2px 2px 0;
+        transform: rotate(45deg);
+      }
+    }
+  }
+  // radio
+  .el-radio {
+    min-width: 132px;
+  }
+  .el-radio.is-bordered {
+    margin-right: 10px;
+    margin-left: 0 !important;
+  }
+  .form-radio-style {
+    .el-radio.is-bordered.is-checked {
+      border-color: @form-box-bg;
+      background-color: @form-box-bg;
+    }
+  }
+  // 输入框
+  .w368 {
+    .el-input,
+    .el-input__inner,
+    .el-textarea__inner,
+    .el-input-number {
+      width: 368px;
+    }
+  }
+  .el-input.is-active .el-input__inner,
+  .el-input__inner:focus {
+    border-color: @blue;
+    & + .el-input__prefix {
+      color: @blue;
+    }
+  }
+  // 数字输入框
+  .el-input-number.is-controls-right {
+    .el-input__inner {
+      text-align: left;
+    }
+  }
+}
